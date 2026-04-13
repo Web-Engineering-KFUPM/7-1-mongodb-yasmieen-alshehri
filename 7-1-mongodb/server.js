@@ -185,11 +185,15 @@
  */
 
 // import mongoose
+import mongoose from "mongoose";
 import dotenv from "dotenv";
 
 // establish connection
 dotenv.config();
-mongoose.connect(proccess.env.MONGO_URL);
+
+mongoose.connect(process.env.MONGO_URL)
+  .then(() => console.log("✅ Connected"))
+  .catch(err => console.log(err));
 
 // define schema
 
