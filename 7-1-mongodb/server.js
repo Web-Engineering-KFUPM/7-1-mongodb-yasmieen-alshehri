@@ -196,7 +196,13 @@ mongoose.connect("mongodb+srv://yasmeen:%40Ynda4321@cluster0.lnjvkzj.mongodb.net
   .catch(err => console.log(err));
 
 // define schema
+const studentSchema = new mongoose.Schema({
+  name: String,
+  age: Number,
+  major: String
+});
 
+const Student = mongoose.model("Student", studentSchema);
 
 // create document
 
