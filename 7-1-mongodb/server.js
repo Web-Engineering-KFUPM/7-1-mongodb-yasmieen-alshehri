@@ -191,8 +191,8 @@ import dotenv from "dotenv";
 // establish connection
 dotenv.config();
 
-mongoose.connect(process.env.MONGO_URL)
-  .then(() => console.log("✅ Connected"))
+mongoose.connect("mongodb+srv://yasmeen:%40Ynda4321@cluster0.lnjvkzj.mongodb.net/labDB")
+  .then(() => console.log("✅ Connected to MongoDB"))
   .catch(err => console.log(err));
 
 // define schema
