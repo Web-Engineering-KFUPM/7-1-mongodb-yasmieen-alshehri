@@ -213,6 +213,19 @@ async function readStudents() {
 readStudents();
 
 // update document
+async function updateStudent() {
+  await Student.updateOne({ name: "Ali" }, { age: 22 });
+  console.log("✅ Updated Ali");
+}
+
+updateStudent();
 
 
 // delete document
+// delete document
+async function deleteStudent() {
+  await Student.deleteOne({ name: "Sara" });
+  console.log("✅ Deleted Sara");
+}
+
+deleteStudent();
