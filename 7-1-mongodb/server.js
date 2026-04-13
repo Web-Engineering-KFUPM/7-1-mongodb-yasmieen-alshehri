@@ -143,16 +143,7 @@
       createStudents();
    - Run server: node server.js and go to mongo cloud to see created document.
  * =====================================================
- * TODO-4 Read Documents
- * ===================================================== 
- * - This code will read all the document in database.
- *  
- *    async function readStudents() {
-         const all = await Student.find();
-         console.log(all);
-      }
-      readStudents();
-    - Run server: node server.js.
+ 
  * =====================================================
  * TODO-5 Update Document
  * ===================================================== 
@@ -213,10 +204,13 @@ async function createStudents() {
   console.log("✅ Inserted");
 }
 
-createStudents()
-
 // read document
+async function readStudents() {
+  const all = await Student.find();
+  console.log(all);
+}
 
+readStudents();
 
 // update document
 
