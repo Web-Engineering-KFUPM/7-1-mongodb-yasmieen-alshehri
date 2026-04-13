@@ -185,9 +185,11 @@
  */
 
 // import mongoose
+import dotenv from "dotenv";
 
 // establish connection
-
+dotenv.config();
+mongoose.connect(proccess.env.MONGO_URL);
 
 // define schema
 
